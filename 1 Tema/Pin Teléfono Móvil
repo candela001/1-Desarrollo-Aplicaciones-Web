@@ -1,0 +1,20 @@
+package com.repaso;
+import java.util.*;
+public class Pin {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int pinCorrecto = 8765;
+		int pin;
+		System.out.print("Introduce tu pin: ");
+		pin = sc.nextInt();
+		if(pin == pinCorrecto) {
+			System.out.println("PIN correcto. Teléfono desbloqueado. ¡Bienvenido!");
+		}else {
+			System.out.println("PIN incorrecto. Teléfono bloqueado. Intente de nuevo:\" en cada intento fallido.");
+		}
+		
+		sc.close();
+	}
+
+}
