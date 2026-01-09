@@ -1,0 +1,41 @@
+package com.repaso;
+import java.util.*;
+public class VelocidadAutopista {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int multado = 0;
+		int exento = 0;
+		int correcto = 0;
+		
+		for(int cantidad = 1; cantidad <= 6; cantidad++) {
+			System.out.println("\n---------VEHICULO "+ cantidad + "---------");
+
+			System.out.print("Introduce velocidad del vehículo (en km/h): ");
+			int velocidad = sc.nextInt();
+			
+			System.out.print("1 → Vehículo normal\n2 → Vehículo de emergencia\nTipo de vehículo: ");
+			int vehiculo = sc.nextInt();
+			
+			if(vehiculo == 2) {
+				System.out.println("EXENTO (emergencia)");
+				exento++;
+			}else if(vehiculo == 1 && velocidad <= 120) {
+				System.out.println("Correctos (OK)");
+				correcto++;
+			}else {
+				System.out.println("MULTA");
+				multado++;
+			}
+		}
+		
+		System.out.println("----------REGISTRO GENERAL----------");
+		System.out.println("Total coches multados: "+ multado);
+		System.out.println("Total coches exentos: "+ exento);
+		System.out.println("Total coches correctos: "+ correcto);
+		
+		
+		sc.close();
+	}
+
+}
