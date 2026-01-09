@@ -1,0 +1,14 @@
+package com.repaso;
+
+public class CuentaAtrasF1 {
+
+	public static void main(String[] args) {
+
+		System.out.println("--- INICIO DE LA CARRERA ---");
+		for(int vueltas = 10; vueltas >= 1; vueltas--) {
+			System.out.println("Quedan " + vueltas + " vueltas por completar.");
+		}
+		System.out.println("¡Carrera terminada! Se han completado todas las vueltas.");
+	}
+
+}
