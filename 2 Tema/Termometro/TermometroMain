@@ -1,0 +1,22 @@
+//CLASE TermometroMAIN
+
+package com.termometro.daw;
+
+public class TemperaturaMain {
+
+	public static void main(String[] args) {
+		TemperaturaCorporal temp = new TemperaturaCorporal(200.5);		
+		temp.mostrarTemperatura();
+		
+		temp.setTemperatura(34.2); // Valor válido
+        temp.mostrarTemperatura();
+		
+		temp.setTemperatura(25.0); // Intento fuera de rango, no cambia
+        temp.mostrarTemperatura();
+
+        temp.setTemperatura(37.2); // Valor válido
+        temp.mostrarTemperatura();
+        
+	}
+
+}
