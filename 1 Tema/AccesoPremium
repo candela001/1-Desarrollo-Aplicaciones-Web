@@ -1,0 +1,26 @@
+package com.repaso;
+import java.util.*;
+public class AccesoPremium {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("¿Estas Suscrito a nuestro servicio?(True = si, False = no): ");
+		boolean suscrito = sc.nextBoolean();
+		System.out.print("¿Tienes pase temporal?(True = si, False = no): ");
+		boolean temporal = sc.nextBoolean();
+		System.out.print("¿Eres mayor de edad?(True = si, False = no): ");
+		boolean edadmayor = sc.nextBoolean();
+		
+		boolean AccesoSus = suscrito && edadmayor;
+		boolean AccesoTemp = !suscrito && temporal;
+		boolean AccesoPerm = AccesoSus || AccesoTemp;
+		
+		System.out.println("----------RESULTADO----------");
+		System.out.println("Tienes acceso por sus: " + AccesoSus);
+		System.out.println("Tienes acceso por Temp: " + AccesoTemp);
+		System.out.println("Tienes acceso: " + AccesoPerm);
+		
+		sc.close();
+	}
+
+}
