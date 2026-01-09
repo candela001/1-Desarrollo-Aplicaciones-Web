@@ -1,0 +1,24 @@
+package com.repaso;
+import java.util.*;
+public class SaludExpres {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		float temperatura = 0;
+		boolean sed;
+		System.out.print("Introduce tu temperatura: ");
+		temperatura = sc.nextFloat();
+		System.out.print("¿Tiene sed?(True = SI, False = NO): ");
+		sed = sc.nextBoolean();
+		boolean necesitaBeberAgua = sed || temperatura >= 37.5;
+		boolean necesitaDescansar = sed && temperatura >= 38;
+		boolean estaBien = !necesitaBeberAgua && !necesitaDescansar;
+		
+		System.out.println("Necesitas beber aguita: " + necesitaBeberAgua);
+		System.out.println("Necesitas descansar un poco: " + necesitaDescansar);
+		System.out.println("Estas debuti: " + estaBien);
+		
+		sc.close();
+	}
+
+}
