@@ -1,0 +1,43 @@
+//CLASE GASTO
+
+package com.control.gastos;
+
+public class gasto {
+	private String concepto;
+	private double cantidad;
+	private String fecha;
+	//Constructor
+	public gasto(String concepto, double cantidad, String fecha) {
+		this.concepto = concepto;
+		this.cantidad = cantidad;
+		this.fecha = fecha;
+	}
+	//Getter
+	public String getConcepto() {
+		return this.concepto;
+	}
+	public double getCantidad() {
+		return this.cantidad;
+	}
+	public String getFecha() {
+		return this.fecha;
+	}
+	
+	//Setter
+	public void setConcepto(String concepto) {
+		this.concepto = concepto;		
+	}
+	public void setCantidad(double cantidad) {
+		this.cantidad = cantidad;
+	}
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+	
+	//Metodo
+	public void mostrarGasto() {
+		System.out.println("\nConcepto: "+ concepto);
+		System.out.println("Cantidad: "+ cantidad +"€");
+		System.out.println("Fecha: "+ fecha);
+	}
+}
