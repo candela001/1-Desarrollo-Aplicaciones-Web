@@ -1,0 +1,25 @@
+//CLASE CONTROLGASTO MAIN
+
+package com.control.gastos;
+
+public class controlGasto {
+
+	public static void main(String[] args) {
+		//Creamos los objetos a raiz de la clase gasto
+		gasto gasto1 = new gasto("Café",23.95,"12/02/2024");
+		gasto gasto2 = new gasto("Pan",2.95,"24/05/2024");
+		gasto gasto3 = new gasto("Gráfica",578.34,"03/09/2024");
+		gasto gasto4 = new gasto("Sofá",199.99,"09/10/2024");
+		gasto gasto5 = new gasto("Mercadona",135.83,"30/12/2024");
+		
+		//Utilizamos el metodo de gasto para mostrar el contenido
+		gasto1.mostrarGasto();
+		gasto2.mostrarGasto();
+		gasto3.mostrarGasto();
+		gasto4.mostrarGasto();
+		gasto5.mostrarGasto();
+
+	}
+	
+	
+}
