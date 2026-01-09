@@ -1,0 +1,47 @@
+package com.repaso;
+import java.util.*;
+public class CajeroAutomatico {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("--------MENU--------");
+		System.out.println("1: Consultar Saldo");
+		System.out.println("2: Retiro de Efectivo");
+		System.out.println("3: Depósito");
+		System.out.println("4: Transferencia");
+		System.out.println("5: Finalizar Sesión");
+		System.out.print("Introduce tu opción: ");
+		int opcion = sc.nextInt();
+		
+		if(opcion > 5 || opcion <= 0) {
+			System.out.println("Opción no válida. Por favor, seleccione un número del 1 al 5.");
+		}
+		
+		switch(opcion) {
+			case 1:{
+				System.out.println("1:Cargando pantalla de saldo...");
+				break;
+			}
+			case 2:{
+				System.out.println("2:Preparando billetes para retiro...");
+				break;
+			}
+			case 3:{
+				System.out.println("3:Abriendo ranura de depósitos...");
+				break;
+			}
+			case 4:{
+				System.out.println("4:Cargando menú de cuentas destino...");
+				break;
+			}
+			case 5:{
+				System.out.println("5:Retire su tarjeta. ¡Gracias por usar nuestro cajero!");
+				break;
+			}
+		}
+		
+		
+		sc.close();
+	}
+
+}
