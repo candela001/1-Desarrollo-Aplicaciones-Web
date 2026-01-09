@@ -1,0 +1,63 @@
+//CLASE CONTACTO
+	
+
+package com.agenda;
+
+public class contacto {
+	private String nombre;
+	private String telefono;
+	private int edad;
+	private String direccion;
+	
+	//Creamos constructor (Solo se usa una vez, una vez creado ya el objeto)
+	//(Getter y Setter necesario cuando las 
+	//variables son private son la unica entrada y salida donde
+	//se puede ver/modificar el contenido):
+	public contacto(String nombre, String telefono, int edad, String direccion) {
+		this.nombre = nombre; //Si quito el this. daria como resultado NULL
+		this.telefono = telefono;
+		this.edad = edad;
+		this.direccion = direccion;
+	}
+	
+	//Getters (Solo lectura)(Los getters solo leen los datos.)
+	public String getNombre() {
+		return this.nombre;
+	}
+	public String getTelefono() {
+		return this.telefono;
+	}
+	public int getEdad() {
+		return this.edad;
+	}
+	public String getDireccion() {
+		return this.direccion;
+	}
+	//Setters (Es donde meteriamos la lógica) 
+	//(Escritura y lectura) 
+	//Es el que permite modificar un valor ya introducido
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	
+	
+	// Crear Metodo que hará esta clase en Agenda
+	public void mostrarContacto() {
+		System.out.println("\nNombre: "+ nombre);
+		System.out.println("Teléfono: "+ telefono);
+		System.out.println("Edad: "+ edad);
+		System.out.println("Direccion: "+ direccion);
+	}
+}
+
+
+
