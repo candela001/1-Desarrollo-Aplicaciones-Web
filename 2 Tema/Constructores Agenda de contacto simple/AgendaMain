@@ -1,0 +1,22 @@
+// CLASE AGENDA
+package com.agenda;
+
+public class agenda {
+
+	public static void main(String[] args) {
+		//Creamos los objetos "persona" gracias a la clase contacto que hemos definido que atributos tendrá
+		//los parametros que metemos en los parentesis es gracias al constructor
+		contacto persona1 = new contacto("Laura", "647388903", 26, "Paseo de la Habanna, 35");
+		contacto persona2 = new contacto("Juan", "676676582", 18, "C/ Pamplona, 28");
+		contacto persona3 = new contacto("Candela", "676876934", 24, "C/ Pedro Tezano, 16 ");
+		contacto persona4 = new contacto("Jose", "763298634", 48, "Paseo de la Dirección, 45");
+		
+		//Usaremos el metodo de la clase contacto y la usaremos en cada objeto creado
+		persona1.mostrarContacto();
+		persona2.mostrarContacto();
+		persona3.mostrarContacto();
+		persona4.mostrarContacto();
+	}
+
+}
+
