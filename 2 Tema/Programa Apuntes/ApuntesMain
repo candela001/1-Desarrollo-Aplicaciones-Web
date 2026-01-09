@@ -1,0 +1,18 @@
+//CLASE APUNTESMAIN
+
+package com.apuntes.daw;
+
+public class ApuntesMain {
+
+	public static void main(String[] args) {
+		apunte apunte1 = new apunte("Programación","UD2", 46);
+		apunte1.mostrarApunte();
+		apunte1.setNumeroPaginas(3);
+		apunte1.mostrarApunte();
+		apunte1.setNumeroPaginas(-3);
+		apunte1.mostrarApunte();
+		apunte1.setNumeroPaginas(12);
+		apunte1.mostrarApunte();
+	}
+
+}
