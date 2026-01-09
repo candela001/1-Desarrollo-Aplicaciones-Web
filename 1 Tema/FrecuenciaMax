@@ -1,0 +1,42 @@
+public class FrecuenciaCardiaca {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce tu edad: ");
+        int edad = sc.nextInt();
+        
+        // Fórmula de la Frecuencia Cardíaca Máxima (FCM):
+        int fcm = 220 - edad;
+
+        // Zona saludable de entrenamiento:
+        // Se considera saludable entrenar entre el 50% y el 85% de la FCM
+        double zonaMin = fcm * 0.50; // 50% de la FCM
+        double zonaMax = fcm * 0.85; // 85% de la FCM
+
+        // Mostramos los resultados al usuario.
+        System.out.println("\n=== Resultados ===");
+        System.out.println("Frecuencia Cardíaca Máxima (FCM): " + fcm + " latidos por minuto");
+        
+        // Mostramos la zona saludable con solo un decimal usando String.format()
+        System.out.println("Zona saludable de entrenamiento: entre " + 
+                           String.format("%.1f", zonaMin) + " y " + 
+                           String.format("%.1f", zonaMax) + " latidos por minuto");
+
+        if (edad < 18) {
+            // Menores de edad: no deben realizar ejercicios intensos
+            System.out.println("Recomendación: Realiza ejercicios moderados adecuados para jóvenes.");
+        } else if (edad <= 40) {
+            // Adultos jóvenes: pueden hacer ejercicios más exigentes
+            System.out.println("Recomendación: Puedes entrenar con intensidad media o alta.");
+        } else if (edad <= 60) {
+            // Adultos mayores: se sugiere mantener la frecuencia dentro del rango saludable
+            System.out.println("Recomendación: Mantén tu frecuencia cardíaca dentro de la zona saludable.");
+        } else {
+            // Mayores de 60 años: es recomendable precaución y consultar al médico
+            System.out.println("Recomendación: Consulta con un médico antes de iniciar ejercicios intensos.");
+        }
+
+        sc.close();
+    }
+}
