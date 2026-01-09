@@ -1,0 +1,19 @@
+package com.repaso;
+import java.util.*;
+public class RescatePaloma {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		long cordX = 0;
+		long cordY = 0;
+		System.out.println("Introduce tus coordenadas");
+		System.out.print("Coordenada X: ");
+		cordX = sc.nextLong();
+		System.out.print("Coordenada Y: ");
+		cordY = sc.nextLong();
+		System.out.println("Recibido. Vamos a por vosotros.");
+		System.out.println("A estas coordenadas: " + cordX + " , "+ cordY);
+		sc.close();
+	}
+
+}
