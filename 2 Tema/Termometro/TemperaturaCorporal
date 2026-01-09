@@ -1,0 +1,41 @@
+//CLASE TemperaturaCorporal
+
+package com.termometro.daw;
+
+
+public class TemperaturaCorporal {
+	private double temperatura;
+	
+	//Constructor
+	public TemperaturaCorporal(double temperatura) {
+		//Usamos el setter dentro del constructor para aprovechar la validación.
+		this.setTemperatura(temperatura);
+	}
+	
+	//SI PONEMOS EN VEZ DE ESE CONSTRUCTOR SOLO PONEMOS 
+	//this.setTemperatura(temperatura); 
+	//(Esto no guarda los valores que estan fuera del rango del setter)
+	
+	//Getter
+	public double getTemperatura() {
+		return this.temperatura;
+	}
+	//Setter
+	public void setTemperatura(double temperatura) {		
+		//Si la temperatura es mayor o igual a 34 y menor o igual a 42 OK
+		//si no Advertencia
+		if (temperatura >= 34.00 && temperatura <= 42.00) {
+            this.temperatura = temperatura;
+            System.out.println("Temperatura actualizada a: " + temperatura + " °C");
+        } else {
+            // Si el valor es inválido, no se asigna.
+            System.out.println("ADVERTENCIA: Valor " + temperatura + 
+            " °C fuera de rango. El valor NO se ha cambiado (se mantiene en " + this.temperatura + " °C).");
+        }
+	}
+	
+	//Método
+	public void mostrarTemperatura() {
+		System.out.println("Temperatura actual: "+ temperatura +"ºC");
+	}
+}
