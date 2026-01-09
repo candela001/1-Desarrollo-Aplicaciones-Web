@@ -1,0 +1,52 @@
+//CLASE APUNTE
+
+package com.apuntes.daw;
+
+public class apunte {
+	private String asignatura;
+	private String tema;
+	private int numeroPaginas;
+	//Constructor, tendremos que meter el Setter cuando lo hagamos
+	public apunte(String asignatura, String tema, int numeroPaginas) {
+		this.asignatura = asignatura;
+		this.tema = tema;
+		//Si ponemos this.numeroPaginas = numeroPaginas; No va a cumplir del todo el SETTER
+		//Porque si el primer valor es negativo, si no cumple con la logica del setter, se va
+		//a mantener igualmente, cuando con (this.setNumeroPaginas(numeroPaginas)) si el valor
+		//es negativo no se va a mantener.
+		this.setNumeroPaginas(numeroPaginas);
+	}	
+	//Getter
+	public String getAsignatura() {
+		return this.asignatura;
+	}
+	public String getTema() {
+		return this.tema;
+	}
+	public int getNumeroPaginas() {
+		return this.numeroPaginas;
+	}
+	
+	//Setter
+	public void setAsignatura(String asignatura) {
+		this.asignatura = asignatura;
+	}
+	public void setTema(String tema) {
+		this.tema = tema;
+	}
+	public void setNumeroPaginas(int numeroPaginas) {
+		if(numeroPaginas <= 0) {
+			System.out.println("\nAdvertencia, numero de páginas incorrecto: " + numeroPaginas + " (Se mantiene "+ this.numeroPaginas + ")");
+		}else {
+			this.numeroPaginas = numeroPaginas;
+		}		
+	}
+	
+	//Metodo
+	
+	public void mostrarApunte() {
+		System.out.println("\nAsignatura: "+ asignatura);
+		System.out.println("Tema: "+ tema);
+		System.out.println("Nº páginas: "+ numeroPaginas);
+	}
+}
