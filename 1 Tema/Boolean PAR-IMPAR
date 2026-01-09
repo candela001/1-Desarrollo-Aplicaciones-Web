@@ -1,0 +1,17 @@
+package com.repaso;
+import java.util.*;
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int numeroEntero = 0;
+		System.out.print("Introduce un numero entero: ");
+		numeroEntero = sc.nextInt();
+		int resultado = (numeroEntero % 2 + 2) % 2;
+		System.out.println("RESULTADO : " + resultado);
+		System.out.println("0 = PAR, 1 = IMPAR");
+		sc.close();
+		
+	}
+
+}
