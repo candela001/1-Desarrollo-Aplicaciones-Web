@@ -1,0 +1,18 @@
+package com.repaso;
+
+public class AhorraJuan {
+
+	public static void main(String[] args) {
+		int semana = 0;
+		int ahorrado = 0;
+		int totalAhorrado = 0;
+		
+		for(semana = 1; semana <= 10; semana++) {
+			ahorrado = semana * 5;
+			totalAhorrado += ahorrado;
+		}
+		
+		System.out.println("Total ahorrado en la semana 10: " + totalAhorrado + "€");
+	}
+
+}
